@@ -1,0 +1,57 @@
+# Compiled class file
+*.class
+
+# Log files
+*.log
+
+# Directories
+bin/
+build/
+out/
+target/
+dist/
+*.jar
+*.war
+*.ear
+
+# Eclipse specific files
+.classpath
+.project
+.settings/
+.metadata/
+bin/
+*.tmp
+*.bak
+
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+out/
+*.ipr
+*.iws
+
+# Maven specific files
+/.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+target/
+
+# Gradle specific files
+.gradle/
+build/
+
+# Other files to ignore
+*.swp
+*.swo
+*~ 
+.DS_Store
+Thumbs.db
+*.orig
+*.log
+*.lock
+
+# JUnit and test files
+/test-output/
+test-results/

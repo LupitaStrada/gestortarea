@@ -1,0 +1,39 @@
+/* estilos.css */
+
+/* Estilo general para formularios */
+.formulario {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Estilo para inputs de texto */
+.input-text {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Relleno */
+    margin: 10px 0; /* Margen */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Esquinas redondeadas */
+}
+
+/* Estilo para etiquetas */
+.label {
+    font-weight: bold; /* Negrita */
+    margin-top: 10px; /* Margen arriba */
+}
+
+/* Estilo para botones */
+.boton {
+    background-color: #4CAF50; /* Fondo verde */
+    color: white; /* Texto blanco */
+    padding: 10px 15px; /* Relleno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+.boton:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el ratón */
+}
