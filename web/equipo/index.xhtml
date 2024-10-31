@@ -51,28 +51,28 @@
                         <f:facet name="header">
                             <h:outputText value="encargado" />
                         </f:facet>
-                        <h:outputText value="#{equipo.encargado})" />
+                        <h:outputText value="#{equipo.encargado}" />
                     </p:column>     
                     
                     <p:column>
                         <f:facet name="header">
                             <h:outputText value="nombreEquipo" />
                         </f:facet>
-                        <h:outputText value="#{equipo.nombreEquipo})" />
+                        <h:outputText value="#{equipo.nombreEquipo}" />
                     </p:column> 
                     
                        <p:column>
                         <f:facet name="header">
                             <h:outputText value="cantidadMiembros" />
                         </f:facet>
-                           <h:outputText value="#{equipo.cantidadMiembros})" />
+                           <h:outputText value="#{equipo.cantidadMiembros}" />
                     </p:column>  
                     
                     <p:column>
                         <f:facet name="header">
                             <h:outputText value="fechaCreacion" />
                         </f:facet>
-                        <h:outputText value="#{equipo.fechaCreacion})" />
+                        <h:outputText value="#{equipo.fechaCreacion}" />
                     </p:column> 
                
                     <p:column>
@@ -80,10 +80,10 @@
                             <h:outputText value="Acciones" />
                         </f:facet>
                         <p:linkButton value="Editar" outcome="edit">
-                            <f:param name="equipoId" value="#{equipo.id}"/>
+                            <f:param name="equipold" value="#{equipo.id}"/>
                         </p:linkButton>
                         <p:linkButton value="Eliminar" outcome="delete">
-                            <f:param name="equipoId" value="#{equipo.id}"/>
+                            <f:param name="equipold" value="#{equipo.id}"/>
                         </p:linkButton>
                     </p:column>
                 </p:dataTable> 
