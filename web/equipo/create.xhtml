@@ -41,7 +41,8 @@
                 </p:menu>
 
             </p:layoutUnit>
-            <p:layoutUnit position="center" size="100" resizable="true" closable="true" collapsible="true">               
+             <p:layoutUnit position="center">
+                Bienvenido a PrimeFaces              
                 <h:form>
                     <p:panel header="Crear Equipo">
                         <p:panelGrid columns="2" layout="grid">
@@ -66,9 +67,8 @@
                                             value="#{equipoBean.equipo.fechaCreacion}"
                                             pattern="dd/MM/yyyy" 
                                             style="width: 300px;"/>
-                                 <p:commandButton value="Crear Registro"
-                                     action="#{equipoBean.create}" ajax="false"/>
-                    <p:linkButton value="Cancelar" href="index.xhtml"/>
+                                 <p:commandButton value="Crear" action="#{equipoBean.create()}" ajax="false"/>
+                                 
                             </p:panelGrid>
                         </p:panelGrid>
                     </p:panel>

@@ -45,13 +45,36 @@
                 <p:linkButton value="Crear Equipo" href="create.xhtml" />
                 <br /><br />
                 <p:growl id="growl" />
-                <p:dataTable var="equipo" value="#{equipoBean.equipos}" paginator="true" rows="5">                    
+                <p:dataTable var="equipo" value="#{equipoBean.equipos}" paginator="true" rows="5">    
+                    
                     <p:column>
                         <f:facet name="header">
                             <h:outputText value="encargado" />
                         </f:facet>
                         <h:outputText value="#{equipo.encargado})" />
-                    </p:column>                    
+                    </p:column>     
+                    
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="nombreEquipo" />
+                        </f:facet>
+                        <h:outputText value="#{equipo.nombreEquipo})" />
+                    </p:column> 
+                    
+                       <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="cantidadMiembros" />
+                        </f:facet>
+                           <h:outputText value="#{equipo.cantidadMiembros})" />
+                    </p:column>  
+                    
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="fechaCreacion" />
+                        </f:facet>
+                        <h:outputText value="#{equipo.fechaCreacion})" />
+                    </p:column> 
+               
                     <p:column>
                         <f:facet name="header">
                             <h:outputText value="Acciones" />

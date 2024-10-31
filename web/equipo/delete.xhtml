@@ -40,8 +40,28 @@
                     </p:menu>
 
                 </p:layoutUnit>
-                <p:layoutUnit position="center" size="100" resizable="true" closable="true" collapsible="true">               
-                    Welcome to PrimeFaces
+                <p:layoutUnit position="center" size="100" resizable="true" closable="true" collapsible="true"> 
+                    <form>
+                    <p:panel header="Eliminar Equipo">
+                        <p:panelGrid columns="2" layout="grid">
+                            <p:outputLabel value="encargado"/>
+                            <h:outputText value="#{equipoBean.equipo.encargado}" />
+                            <p:outputLabel value="nombreEquipo"/>
+                            <h:outputText value="#{equipoBean.equipo.nombreEquipo}"/>
+                            <p:outputLabel value="CantidadMiembros"/> 
+                            <h:outputText value="#{equipoBean.equipo.cantidadMiembros}" />
+                       
+                            <p:outputLabel for="equipo-fechaCreacion" value="Fecha de Creación"/>
+                                <p:calendar id="equipo-fechaCreacion"
+                                            value="#{equipoBean.equipo.fechaCreacion}" pattern="dd/MM/yyyy"/>
+                                
+                             <p:commandButton value="Eliminar" action="#{equipoBean.delete}" ajax="false"/> 
+                            <p:linkButton value="Cancelar" href="index.xhtml" />
+                            <p:inputText type="hidden" value="#{equipoBean.equipo.id}" /> 
+                            
+                        </p:panelGrid>
+                    </p:panel>
+                        </form>
                 </p:layoutUnit>          
             </p:layout>
         </h:body>
