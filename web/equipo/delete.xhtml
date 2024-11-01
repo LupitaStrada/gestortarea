@@ -3,45 +3,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
-        <h:head>
-            <title>Facelet Title</title>
-        </h:head>
-        <h:body>
-            <p:layout fullPage="true">
-                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
-                    Header
-                </p:layoutUnit>
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <p:layout fullPage="true">
+            <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                Header
+            </p:layoutUnit>
 
-                <p:layoutUnit position="south" size="100"  closable="true" collapsible="true">
-                    footer
-                </p:layoutUnit>
-                <p:layoutUnit position="west" size="175" header="Menu" collapsible="true">
-                    <p:menu>   
-                        <p:submenu label="Equipo">
-                            <p:menuitem value="Listado" outcome="/equipo/index"/>
-                                       
-                        </p:submenu>    
-                        <p:submenu label="Usuario">
-                            <p:menuitem value="Listado" outcome="/usuario/index"/>
-                                       
-                        </p:submenu> 
-                        <p:submenu label="Miembro Equipo">
-                            <p:menuitem value="Listado" outcome="/miembroEquipo/index"/>                                       
-                        </p:submenu> 
-                        <p:submenu label="Tarea">
-                            <p:menuitem value="Listado" outcome="/tarea/index"/>                                      
-                        </p:submenu> 
-                        <p:submenu label="Rol">
-                            <p:menuitem value="Listado" outcome="/rol/index"/>                                       
-                        </p:submenu> 
-                        <p:submenu label="Progreso Tarea">
-                            <p:menuitem value="Listado" outcome="/progresoTarea/index"/>                                       
-                        </p:submenu> 
-                    </p:menu>
+            <p:layoutUnit position="south" size="100"  closable="true" collapsible="true">
+                footer
+            </p:layoutUnit>
+            <p:layoutUnit position="west" size="175" header="Menu" collapsible="true">
+                <p:menu>   
+                    <p:submenu label="Equipo">
+                        <p:menuitem value="Listado" outcome="/equipo/index"/>
 
-                </p:layoutUnit>
-                <p:layoutUnit position="center" size="100" resizable="true" closable="true" collapsible="true"> 
-                    <form>
+                    </p:submenu>    
+                    <p:submenu label="Usuario">
+                        <p:menuitem value="Listado" outcome="/usuario/index"/>
+
+                    </p:submenu> 
+                    <p:submenu label="Miembro Equipo">
+                        <p:menuitem value="Listado" outcome="/miembroEquipo/index"/>                                       
+                    </p:submenu> 
+                    <p:submenu label="Tarea">
+                        <p:menuitem value="Listado" outcome="/tarea/index"/>                                      
+                    </p:submenu> 
+                    <p:submenu label="Rol">
+                        <p:menuitem value="Listado" outcome="/rol/index"/>                                       
+                    </p:submenu> 
+                    <p:submenu label="Progreso Tarea">
+                        <p:menuitem value="Listado" outcome="/progresoTarea/index"/>                                       
+                    </p:submenu> 
+                </p:menu>
+
+            </p:layoutUnit>
+            <p:layoutUnit position="center" size="100" resizable="true" closable="true" collapsible="true"> 
+                <h:form>
                     <p:panel header="Eliminar Equipo">
                         <p:panelGrid columns="2" layout="grid">
                             <p:outputLabel value="encargado"/>
@@ -50,20 +50,20 @@
                             <h:outputText value="#{equipoBean.equipo.nombreEquipo}"/>
                             <p:outputLabel value="CantidadMiembros"/> 
                             <h:outputText value="#{equipoBean.equipo.cantidadMiembros}" />
-                       
+
                             <p:outputLabel for="equipo-fechaCreacion" value="Fecha de Creación"/>
-                                <p:calendar id="equipo-fechaCreacion"
-                                            value="#{equipoBean.equipo.fechaCreacion}" pattern="dd/MM/yyyy"/>
-                                
-                             <p:commandButton value="Eliminar" action="#{equipoBean.delete}" ajax="false"/> 
+                            <p:calendar id="equipo-fechaCreacion"
+                                        value="#{equipoBean.equipo.fechaCreacion}" pattern="dd/MM/yyyy"/>
+
+                            <p:commandButton value="Eliminar" action="#{equipoBean.delete}" ajax="false"/> 
                             <p:linkButton value="Cancelar" href="index.xhtml" />
                             <p:inputText type="hidden" value="#{equipoBean.equipo.id}" /> 
-                            
+
                         </p:panelGrid>
                     </p:panel>
-                        </form>
-                </p:layoutUnit>          
-            </p:layout>
-        </h:body>
+               </h:form>
+            </p:layoutUnit>          
+        </p:layout>
+    </h:body>
 </html>
 

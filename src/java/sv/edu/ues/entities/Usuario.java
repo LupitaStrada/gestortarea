@@ -1,3 +1,4 @@
+
 package sv.edu.ues.entities;
 import java.io.Serializable;
 import java.sql.Date;
