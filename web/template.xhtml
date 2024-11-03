@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <style>
+            .custom-menu {
+                width: 290px; /* Ajusta el ancho según sea necesario */               
+            }
+            .custom-panel ui-panel-titlebar {
+                background-color: #007BFF !important; /* Azul */
+                color: white; /* Color del texto */
+                padding: 20px; /* Espaciado alrededor del contenido */
+                border-radius: 5px; /* Bordes redondeados */
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <p:layout fullPage="true">
+            <p:layoutUnit position="north" size="150" resizable="true" closable="true" collapsible="true">
+                <div  style="background-color: #007BFF; color: white; padding: 10px;">
+                    <h1>Bienvenido a la Aplicación</h1>
+                    <h2>Gestión de Roles y Tareas</h2>
+                </div>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="south" size="100"  closable="true" collapsible="true" >
+                <div style="background-color: #0056b3; color: white; padding: 20px; text-align: center;height: 80px">
+                     © 2024 Mi Aplicación. Todos los derechos reservados.
+                </div> 
+               
+               
+            </p:layoutUnit>
+            <p:layoutUnit position="west" size="300" header="Menu" collapsible="true">
+                <p:menu styleClass="custom-menu">
+                    <p:submenu label="Equipo" icon="ui-icon-person">
+                        <p:menuitem value="Listados" outcome="/equipo/index" icon="ui-icon-list"/>
+                        <p:menuitem value="Agregar" outcome="/equipo/create" icon="ui-icon-plus"/>
+                    </p:submenu>       
+                    <p:submenu label="Usuario">
+                        <p:menuitem value="Listados" outcome="/usuario/index" icon="ui-icon-list"/>
+                    </p:submenu> 
+                    <p:submenu label="Miembro Equipo" >
+                        <p:menuitem value="Listados" outcome="/miembroEquipo/index" icon="ui-icon-list"/>
+                    </p:submenu> 
+                    <p:submenu label="Tarea" >
+                        <p:menuitem value="Listados" outcome="/tarea/index" icon="ui-icon-list"/>
+                    </p:submenu> 
+                    <p:submenu label="Rol" >
+                        <p:menuitem value="Listados" outcome="/rol/index" icon="ui-icon-list"/>
+                    </p:submenu> 
+                    <p:submenu label="Progreso Tarea" >
+                        <p:menuitem value="Listados" outcome="/progresoTarea/index" icon="ui-icon-list"/>
+                    </p:submenu> 
+                </p:menu>               
+            </p:layoutUnit>
+            <p:layoutUnit position="center" size="100" resizable="true" closable="true" collapsible="true">               
+                <ui:insert name="content">
+                    <p></p>
+                </ui:insert>
+            </p:layoutUnit>          
+        </p:layout>
+    </h:body>
+</html>
+
