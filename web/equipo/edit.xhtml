@@ -1,76 +1,39 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+                 xmlns:h="http://xmlns.jcp.org/jsf/html"
+                 xmlns:p="http://primefaces.org/ui"             
+                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                 template="/template.xhtml">
 
-    <h:head>
-        <title>Facelet Title</title>
-    </h:head>
-    <h:body>
-        <p:layout fullPage="true">
-            <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
-                Header
-            </p:layoutUnit>
+    <!-- Insertar contenido en la sección 'content' de la plantilla -->
+    <ui:define name="content">
+        <h:form>
+            <p:panel header="Editar Equipo">
+                <p:panelGrid columns="2" layout="grid">
+                    <p:outputLabel for="equipo-encargado" value="Encargado"/>
+                    <p:inputText id="equipo-encargado"
+                                 value="#{equipoBean.equipo.encargado}"/>
 
-            <p:layoutUnit position="south" size="100"  closable="true" collapsible="true">
-                footer
-            </p:layoutUnit>
-            <p:layoutUnit position="west" size="175" header="Menu" collapsible="true">
-                <p:menu>   
-                    <p:submenu label="Equipo">
-                        <p:menuitem value="Listado" outcome="/equipo/index"/>
+                    <p:outputLabel for="equipo-nombreEquipo" value="nombreEquipo"/>
+                    <p:inputText id="equipo-nombreEquipo"
+                                 value="#{equipoBean.equipo.nombreEquipo}"/>
 
-                    </p:submenu>    
-                    <p:submenu label="Usuario">
-                        <p:menuitem value="Listado" outcome="/usuario/index"/>
+                    <p:outputLabel for="equipo-CantidadMiembros" value="Cantidad Miembros"/> 
+                    <p:inputNumber
+                        id="equipo-CantidadMiembros"                                 
+                        value="#{equipoBean.equipo.cantidadMiembros}"/> 
 
-                    </p:submenu> 
-                    <p:submenu label="Miembros Equipo">
-                        <p:menuitem value="Listado" outcome="/miembroEquipo/index"/>                                       
-                    </p:submenu> 
-                    <p:submenu label="Tarea">
-                        <p:menuitem value="Listado" outcome="/tarea/index"/>                                      
-                    </p:submenu> 
-                    <p:submenu label="Rol">
-                        <p:menuitem value="Listado" outcome="/rol/index"/>                                       
-                    </p:submenu> 
-                    <p:submenu label="Progreso Tarea">
-                        <p:menuitem value="Listado" outcome="/progresoTarea/index"/>                                       
-                    </p:submenu> 
-                </p:menu>
+                    <p:outputLabel for="equipo-fechaCreacion" value="Fecha de Creación"/>
+                    <p:calendar id="equipo-fechaCreacion"
+                                value="#{equipoBean.equipo.fechaCreacion}" pattern="dd/MM/yyyy"/>
 
-            </p:layoutUnit>
-            <p:layoutUnit position="center" size="100" resizable="true" closable="true" collapsible="true">    
-                <h:form>
-                    <p:panel header="Editar Equipo">
-                        <p:panelGrid columns="2" layout="grid">
-                              <p:outputLabel for="equipo-encargado" value="Encargado"/>
-                                <p:inputText id="equipo-encargado"
-                                             value="#{equipoBean.equipo.encargado}"/>
+                    <p:commandButton value="Editar"
+                                     action="#{equipoBean.edit}" ajax="false"/>
+                    <p:linkButton value="Cancelar" href="index.xhtml" />
+                    <p:inputText type="hidden" value="#{equipoBean.equipo.id}"/>
+                </p:panelGrid>
+            </p:panel>
+        </h:form>    
+    </ui:define>
 
-                                <p:outputLabel for="equipo-nombreEquipo" value="nombreEquipo"/>
-                                <p:inputText id="equipo-nombreEquipo"
-                                             value="#{equipoBean.equipo.nombreEquipo}"/>
-
-                                <p:outputLabel for="equipo-CantidadMiembros" value="Cantidad Miembros"/> 
-                                <p:inputNumber
-                                    id="equipo-CantidadMiembros"                                 
-                                    value="#{equipoBean.equipo.cantidadMiembros}"/> 
-
-                                <p:outputLabel for="equipo-fechaCreacion" value="Fecha de Creación"/>
-                                <p:calendar id="equipo-fechaCreacion"
-                                            value="#{equipoBean.equipo.fechaCreacion}" pattern="dd/MM/yyyy"/>
-                                
-                                 <p:commandButton value="Editar"
-                                             action="#{equipoBean.edit}" ajax="false"/>
-                            <p:linkButton value="Cancelar" href="index.xhtml" />
-                            <p:inputText type="hidden" value="#{equipoBean.equipo.id}"/>
-                        </p:panelGrid>
-                    </p:panel>
-                </h:form>               
-            </p:layoutUnit>          
-        </p:layout>
-    </h:body>
-</html>
-
+</ui:composition>
 

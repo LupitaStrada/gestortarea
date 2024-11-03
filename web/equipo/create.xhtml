@@ -1,81 +1,44 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
-    <h:head>
-        <title>Facelet Title</title>
-     <!--<link rel="stylesheet" href="${pageContext.request.contextPath}/css/estilos.css">-->
-    </h:head>
-    <h:body>
-        <p:layout fullPage="true">
-            <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
-                Header
-            </p:layoutUnit>
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+                 xmlns:h="http://xmlns.jcp.org/jsf/html"
+                 xmlns:p="http://primefaces.org/ui"             
+                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                 template="/template.xhtml">
 
-            <p:layoutUnit position="south" size="100"  closable="true" collapsible="true">
-                footer
-            </p:layoutUnit>
-            <p:layoutUnit position="west" size="175" header="Menu" collapsible="true">
-                <p:menu>   
-                    <p:submenu label="Equipo">
-                        <p:menuitem value="Listado" outcome="/equipo/index"/>
+    <!-- Insertar contenido en la sección 'content' de la plantilla -->
+    <ui:define name="content">
+        Bienvenido a PrimeFaces              
+        <h:form>
+            <p:panel header="Crear Equipo" styleClass="custom-panel">
+                <p:panelGrid columns="2" layout="grid">
+                    <p:panelGrid columns="2" styleClass="ui-noborder">
+                        <p:outputLabel for="equipo-encargado" value="Encargado"/>
+                        <p:inputText id="equipo-encargado"
+                                     value="#{equipoBean.equipo.encargado}"
+                                     style="width: 300px; font-size: 16px;"/>
 
-                    </p:submenu>    
-                    <p:submenu label="Usuario">
-                        <p:menuitem value="Listado" outcome="/usuario/index"/>
+                        <p:outputLabel for="equipo-nombreEquipo" value="nombreEquipo"/>
+                        <p:inputText id="equipo-nombreEquipo"
+                                     value="#{equipoBean.equipo.nombreEquipo}"
+                                     style="width: 300px; font-size: 16px;"/>
 
-                    </p:submenu> 
-                    <p:submenu label="Miembro Equipo">
-                        <p:menuitem value="Listado" outcome="/miembroEquipo/index"/>                                       
-                    </p:submenu> 
-                    <p:submenu label="Tarea">
-                        <p:menuitem value="Listado" outcome="/tarea/index"/>                                      
-                    </p:submenu> 
-                    <p:submenu label="Rol">
-                        <p:menuitem value="Listado" outcome="/rol/index"/>                                       
-                    </p:submenu> 
-                    <p:submenu label="Progreso Tarea">
-                        <p:menuitem value="Listado" outcome="/progresoTarea/index"/>                                       
-                    </p:submenu> 
-                </p:menu>
+                        <p:outputLabel for="equipo-CantidadMiembros" value="Cantidad Miembros"/> 
+                        <p:inputNumber
+                            id="equipo-CantidadMiembros"                                 
+                            value="#{equipoBean.equipo.cantidadMiembros}"/> 
 
-            </p:layoutUnit>
-             <p:layoutUnit position="center">
-                Bienvenido a PrimeFaces              
-                <h:form>
-                    <p:panel header="Crear Equipo">
-                        <p:panelGrid columns="2" layout="grid">
-                            <p:panelGrid columns="2" styleClass="ui-noborder">
-                                <p:outputLabel for="equipo-encargado" value="Encargado"/>
-                                <p:inputText id="equipo-encargado"
-                                             value="#{equipoBean.equipo.encargado}"
-                                             style="width: 300px; font-size: 16px;"/>
+                        <p:outputLabel for="equipo-fechaCreacion" value="Fecha de Creación"/>
+                        <p:calendar id="equipo-fechaCreacion"
+                                    value="#{equipoBean.equipo.fechaCreacion}"
+                                    pattern="dd/MM/yyyy" 
+                                    style="width: 300px;"/>
+                        <p:commandButton value="Crear" action="#{equipoBean.create()}" ajax="false"/>
 
-                                <p:outputLabel for="equipo-nombreEquipo" value="nombreEquipo"/>
-                                <p:inputText id="equipo-nombreEquipo"
-                                             value="#{equipoBean.equipo.nombreEquipo}"
-                                             style="width: 300px; font-size: 16px;"/>
+                    </p:panelGrid>
+                </p:panelGrid>
+            </p:panel>
+        </h:form> 
+    </ui:define>
 
-                                <p:outputLabel for="equipo-CantidadMiembros" value="Cantidad Miembros"/> 
-                                <p:inputNumber
-                                    id="equipo-CantidadMiembros"                                 
-                                    value="#{equipoBean.equipo.cantidadMiembros}"/> 
-
-                                <p:outputLabel for="equipo-fechaCreacion" value="Fecha de Creación"/>
-                                <p:calendar id="equipo-fechaCreacion"
-                                            value="#{equipoBean.equipo.fechaCreacion}"
-                                            pattern="dd/MM/yyyy" 
-                                            style="width: 300px;"/>
-                                 <p:commandButton value="Crear" action="#{equipoBean.create()}" ajax="false"/>
-                                 
-                            </p:panelGrid>
-                        </p:panelGrid>
-                    </p:panel>
-                </h:form> 
-            </p:layoutUnit>          
-        </p:layout>
-    </h:body>
-</html>
+</ui:composition>
 
 
