@@ -27,7 +27,7 @@ public interface UsuarioFacadeLocal {
     List<Usuario> findAll();
 
     List<Usuario> findRange(int[] range);
-
+    Usuario login(Usuario usuario);
     int count();
     
 }

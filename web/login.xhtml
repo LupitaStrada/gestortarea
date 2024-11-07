@@ -2,8 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Facelet Title</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
@@ -34,35 +33,28 @@
                 </div> 
 
 
-            </p:layoutUnit>
-            <p:layoutUnit position="west" size="300" header="Menu" collapsible="true">
-                <p:menu styleClass="custom-menu">
-                    <p:submenu label="Equipo" icon="ui-icon-person">
-                        <p:menuitem value="Listados" outcome="/equipo/index" icon="ui-icon-list"/>
-                        <p:menuitem value="Agregar" outcome="/equipo/create" icon="ui-icon-plus"/>
-                    </p:submenu>                          
-                    <p:submenu label="Miembro Equipo" >
-                        <p:menuitem value="Listados" outcome="/miembroEquipo/index" icon="ui-icon-list"/>
-                    </p:submenu> 
-                    <p:submenu label="Tarea" >
-                        <p:menuitem value="Listados" outcome="/tarea/index" icon="ui-icon-list"/>
-                    </p:submenu> 
-                    <p:submenu label="Rol" >
-                        <p:menuitem value="Listados" outcome="/rol/index" icon="ui-icon-list"/>
-                    </p:submenu> 
-                    <p:submenu label="Progreso Tarea" >
-                        <p:menuitem value="Listados" outcome="/progresoTarea/index" icon="ui-icon-list"/>
-                    </p:submenu> 
-                    <p:submenu label="Usuario">
-                        <p:menuitem value="Listados" outcome="/usuario/index" icon="ui-icon-list"/>
-                        <p:menuitem value="Cerrar session" outcome="/login"/>
-                    </p:submenu> 
-                </p:menu>               
-            </p:layoutUnit>
+            </p:layoutUnit>           
             <p:layoutUnit position="center" size="100" resizable="true" closable="true" collapsible="true">               
-                <ui:insert name="content">
-                    <p></p>
-                </ui:insert>
+                <h:form>
+                    <p:panel header="Login" styleClass="custom-panel">
+                        <p:panelGrid columns="2" layout="grid">
+                            <p:panelGrid columns="2" styleClass="ui-noborder">
+                                <p:outputLabel for="username" value="Usuario:"/>
+                                <p:inputText id="username"
+                                             value="#{loginBean.user.usuarioName}" required="true"
+                                             style="width: 300px; font-size: 16px;"/>
+
+                                <p:outputLabel for="password" value="Contraseña:"/>
+                                <h:inputSecret id="password"
+                                               value="#{loginBean.user.password}" required="true"
+                                               style="width: 300px; font-size: 16px;"/>
+
+                                <h:commandButton value="Iniciar Sesión" action="#{loginBean.login}" />
+                                <h:outputLabel value="#{loginBean.message}" style="color:red;" rendered="#{not empty loginBean.message}" />
+                            </p:panelGrid>
+                        </p:panelGrid>
+                    </p:panel>
+                </h:form> 
             </p:layoutUnit>          
         </p:layout>
     </h:body>
