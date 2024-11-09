@@ -1,0 +1,33 @@
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+                 xmlns:h="http://xmlns.jcp.org/jsf/html"
+                 xmlns:p="http://primefaces.org/ui"             
+                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                 template="/template.xhtml">
+
+    <!-- Insertar contenido en la sección 'content' de la plantilla -->
+    <ui:define name="content">
+        <h:form>
+            <p:panel header="Editar ProgresoTarea">
+                <p:panelGrid columns="2" layout="grid">
+                     <p:outputLabel for="progresoTarea-fechaActualizacion" value="Fecha de Actualizacion"/>
+                        <p:calendar id="progresoTarea-fechaActualizacion"
+                                    value="#{progresoTareaBean.fechaActualizacion}"
+                                    pattern="dd/MM/yyyy" 
+                                    style="width: 300px;"/>
+
+                    <p:outputLabel for="progresoTarea-porcentajeAvance" value="porcentajeAvance"/>
+                    <p:inputText id="progresoTarea-porcentajeAvance"
+                                 value="#{porcentajeAvanceBean.porcentajeAvance.porcentajeAvance}"/>
+
+                  
+                    <p:commandButton value="Editar"
+                                     action="#{progresoTareaBean.edit}" ajax="false"/>
+                    <p:linkButton value="Cancelar" href="index.xhtml" />
+                    <p:inputText type="hidden" value="#{progresoTareaBean.progresoTarea.id}"/>
+                </p:panelGrid>
+            </p:panel>
+        </h:form>    
+    </ui:define>
+
+</ui:composition>
+

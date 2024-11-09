@@ -3,15 +3,17 @@ package sv.edu.ues.entities;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 
 @Entity
 @Table(name = "Rol")
 public class Rol implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idRol")
     private int idRol;
 
@@ -35,7 +37,6 @@ public class Rol implements Serializable {
     }
 
     // Getters y Setters
-
     public Rol() {
     }
 }

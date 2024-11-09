@@ -14,24 +14,28 @@
             <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/equipo/delete.xhtml</file>
         </group>
         <group name="Group 20241031-11:10:25">
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/miembroEquipo/create.xhtml</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/miembroEquipo/index.xhtml</file>
             <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/progresoTarea/index.xhtml</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/miembroEquipo/edit.xhtml</file>
             <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/equipo/create.xhtml</file>
-            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/src/conf/persistence.xml</file>
-            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/template.xhtml</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/src/java/sv/edu/ues/entities/Rol.java</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/rol/create.xhtml</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/rol/index.xhtml</file>
             <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/progresoTarea/eliminar.xhtml</file>
-            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/src/java/sv/edu/ejb/EquipoFacade.java</file>
-            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/src/java/sv/edu/ejb/UsuarioFacadeLocal.java</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/miembroEquipo/delete.xhtml</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/src/java/sv/edu/ues/entities/ProgresoTarea.java</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/src/java/sv/edu/ues/bean/ProgresoTareaBean.java</file>
             <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/equipo/delete.xhtml</file>
-            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/progresoTarea/modificar.xhtml</file>
-            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/src/java/sv/edu/ues/entities/Usuario.java</file>
-            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/src/java/sv/edu/ues/bean/EquipoBean.java</file>
-            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/src/java/sv/edu/ejb/UsuarioFacade.java</file>
-            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/login.xhtml</file>
-            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/usuario/index.xhtml</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/rol/delete.xhtml</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/progresoTarea/edit.xhtml</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/src/java/sv/edu/ues/bean/RolBean.java</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/src/java/sv/edu/ues/bean/MiembroEquipoBean.java</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/equipo/index.xhtml</file>
             <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/progresoTarea/create.xhtml</file>
-            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/src/java/sv/edu/ues/bean/LoginBean.java</file>
-            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/src/java/sv/edu/ejb/EquipoFacadeLocal.java</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/src/java/sv/edu/ues/entities/Tarea.java</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/equipo/edit.xhtml</file>
+            <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/rol/edit.xhtml</file>
         </group>
     </open-files>
 </project-private>

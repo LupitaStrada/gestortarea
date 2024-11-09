@@ -55,3 +55,4 @@ Thumbs.db
 # JUnit and test files
 /test-output/
 test-results/
+!liberias/*.jar

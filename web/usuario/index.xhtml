@@ -1,33 +1,54 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
-        <h:head>
-            <title>Facelet Title</title>
-        </h:head>
-        <h:body>
-            <p:layout fullPage="true">
-                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
-                    Header
-                </p:layoutUnit>
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+                 xmlns:h="http://xmlns.jcp.org/jsf/html"
+                 xmlns:p="http://primefaces.org/ui"             
+                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                 xmlns:f="http://xmlns.jcp.org/jsf/core"
+                 template="/template.xhtml">
 
-                <p:layoutUnit position="south" size="100"  closable="true" collapsible="true">
-                    footer
-                </p:layoutUnit>
-                <p:layoutUnit position="west" size="175" header="Menu" collapsible="true">
-                    <p:menu>   
-                        <p:submenu label="Usuario">
-                            <p:menuitem value="Listado" outcome="/usuario/index"/>
-                                       
-                        </p:submenu>                              
-                    </p:menu>
+    <!-- Insertar contenido en la sección 'content' de la plantilla -->
+    <ui:define name="content">
+        <h:form>
+            <p:linkButton value="Crear Usuario" href="crear.xhtml" />
+            <br /><br />
+            <p:growl id="growl" />
+            <p:dataTable var="usuario" value="#{usuarioBean.usuarios}" paginator="true" rows="5">    
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="usuarioName" />
+                    </f:facet>
+                    <h:outputText value="#{usuario.usuarioName}" />
+                </p:column>     
 
-                </p:layoutUnit>
-                <p:layoutUnit position="center" size="100" resizable="true" closable="true" collapsible="true">               
-                    Welcome to Usuario
-                </p:layoutUnit>          
-            </p:layout>
-        </h:body>
-</html>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="password" />
+                    </f:facet>
+                    <h:outputText value="#{usuario.password}" />
+                </p:column> 
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="fechaNacimiento" />
+                    </f:facet>
+                    <h:outputText value="#{usuario.fechaNacimiento}" />
+                </p:column>  
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="fechaCreacion" />
+                    </f:facet>
+                    <h:outputText value="#{usuario.edad}" />
+                </p:column> 
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Acciones" />
+                    </f:facet>                  
+                </p:column>
+            </p:dataTable> 
+        </h:form>
+    </ui:define>
+
+</ui:composition>
+
 

@@ -1,0 +1,49 @@
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+                 xmlns:h="http://xmlns.jcp.org/jsf/html"
+                 xmlns:p="http://primefaces.org/ui"             
+                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                 template="/template.xhtml">
+
+    <!-- Insertar contenido en la sección 'content' de la plantilla -->
+    <ui:define name="content">
+        Bienvenido a PrimeFaces              
+        <h:form>
+            <p:panel header="Crear Usuario" styleClass="custom-panel">
+                <p:panelGrid columns="2" layout="grid" styleClass="ui-noborder">
+
+                    <p:outputLabel for="usuario-usuarioName" value="Nombre de Usuario:" />
+                    <p:inputText id="usuario-usuarioName"
+                                 value="#{usuarioBean.usuario.usuarioName}"
+                                 style="width: 300px; font-size: 16px;" />
+
+                    <p:outputLabel for="usuario-password" value="Contraseña:" />
+                    <h:inputSecret id="usuario-password"
+                                   value="#{usuarioBean.usuario.password}"
+                                   required="true"
+                                   requiredMessage="La contraseña es obligatoria."
+                                   style="width: 300px; font-size: 16px;" />
+
+                    <p:outputLabel for="usuario-fechaNacimiento" value="Fecha de Nacimiento:" />
+                    <p:calendar id="usuario-fechaNacimiento"
+                                value="#{usuarioBean.usuario.fechaNacimiento}"
+                                pattern="dd/MM/yyyy" 
+                                style="width: 300px;" />
+
+                    <p:outputLabel for="usuario-edad" value="Edad:" />
+                    <p:inputNumber id="usuario-edad"                                 
+                                   value="#{usuarioBean.usuario.edad}"
+                                   style="width: 300px; font-size: 16px;" />
+
+                         <p:outputLabel for="usuario-email" value="Email" />
+                    <p:inputText id="usuario-email"
+                                 value="#{usuarioBean.usuario.email}"
+                                 style="width: 300px; font-size: 16px;" />
+
+                    <p:commandButton value="Crear" action="#{usuarioBean.create()}" ajax="false" />
+
+                </p:panelGrid>
+            </p:panel>
+        </h:form> 
+    </ui:define>
+
+</ui:composition>

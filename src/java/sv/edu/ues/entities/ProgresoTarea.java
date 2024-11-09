@@ -24,7 +24,7 @@ public class ProgresoTarea {
     private float porcentajeAvance;
 
     @Column(name = "fechaActualizacion")
-    private java.sql.Date fechaActualizacion;
+    private Date fechaActualizacion;
 
     @ManyToOne
     @JoinColumn(name = "idTarea", referencedColumnName = "idTarea")
@@ -51,7 +51,7 @@ public class ProgresoTarea {
     }
 
     public void setFechaActualizacion(Date fechaActualizacion) {
-        this.fechaActualizacion = (java.sql.Date) fechaActualizacion;
+        this.fechaActualizacion =  fechaActualizacion;
     }
 
     public Tarea getTarea() {

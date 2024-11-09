@@ -1,0 +1,25 @@
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+                 xmlns:h="http://xmlns.jcp.org/jsf/html"
+                 xmlns:p="http://primefaces.org/ui"             
+                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                 template="/template.xhtml">
+
+    <!-- Insertar contenido en la sección 'content' de la plantilla -->
+    <ui:define name="content">
+        <h:form>
+            <p:panel header="Editar Rol">
+                <p:panelGrid columns="2" layout="grid">
+                    <p:outputLabel for="rol-nombreRol" value="NombreRol"/>
+                    <p:inputText id="rol-nombreRol"
+                                 value="#{rolBean.rol.nombreRol}"/>
+                    <p:commandButton value="Editar"
+                                     action="#{rolBean.edit}" ajax="false"/>
+                    <p:linkButton value="Cancelar" href="index.xhtml" />
+                    <p:inputText type="hidden" value="#{rolBean.rol.idRol}"/>
+                </p:panelGrid>
+            </p:panel>
+        </h:form>    
+    </ui:define>
+
+</ui:composition>
+

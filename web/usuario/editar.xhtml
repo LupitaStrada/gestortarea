@@ -1,0 +1,39 @@
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+                 xmlns:h="http://xmlns.jcp.org/jsf/html"
+                 xmlns:p="http://primefaces.org/ui"             
+                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                 template="/template.xhtml">
+
+    <!-- Insertar contenido en la sección 'content' de la plantilla -->
+    <ui:define name="content">
+        <h:form>
+            <p:panel header="Editar Usuario">
+                <p:panelGrid columns="2" layout="grid">
+                    <p:outputLabel for="usuario-userName" value="username"/>
+                    <p:inputText id="usuario-usuarioName"
+                                 value="#{usuarioBean.usuario.usuarioName}"/>
+
+                    <p:outputLabel for="usuario-password" value="password"/>
+                    <p:inputText id="usuario-password"
+                                 value="#{equipoBean.equipo.nombreEquipo}"/>
+
+                    <p:outputLabel for="equipo-CantidadMiembros" value="Cantidad Miembros"/> 
+                    <p:inputNumber
+                        id="equipo-CantidadMiembros"                                 
+                        value="#{equipoBean.equipo.cantidadMiembros}"/> 
+
+                    <p:outputLabel for="equipo-fechaCreacion" value="Fecha de Creación"/>
+                    <p:calendar id="equipo-fechaCreacion"
+                                value="#{equipoBean.equipo.fechaCreacion}" pattern="dd/MM/yyyy"/>
+
+                    <p:commandButton value="Editar"
+                                     action="#{equipoBean.edit}" ajax="false"/>
+                    <p:linkButton value="Cancelar" href="index.xhtml" />
+                    <p:inputText type="hidden" value="#{equipoBean.equipo.id}"/>
+                </p:panelGrid>
+            </p:panel>
+        </h:form>    
+    </ui:define>
+
+</ui:composition>
+

@@ -1,7 +1,7 @@
 
 package sv.edu.ues.entities;
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -21,10 +21,10 @@ public class Usuario implements Serializable {
     private String password;
 
     @Column(name = "fechaNacimiento")
-    private java.sql.Date fechaNacimiento;
+    private Date fechaNacimiento;
 
     @Column(name = "ultimaConexion")
-    private java.sql.Date ultimaConexion;
+    private Date ultimaConexion;
 
     @Column(name = "edad")
     private int edad;

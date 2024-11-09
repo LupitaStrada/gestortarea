@@ -1,0 +1,23 @@
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+                 xmlns:h="http://xmlns.jcp.org/jsf/html"
+                 xmlns:p="http://primefaces.org/ui"             
+                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                 template="/template.xhtml">
+    <!-- Insertar contenido en la sección 'content' de la plantilla -->
+    <ui:define name="content">
+        Bienvenido a Rol           
+        <h:form>
+            <p:panel header="Crear Rol" styleClass="custom-panel">
+                <p:panelGrid columns="2" layout="grid">
+                    <p:panelGrid columns="2" styleClass="ui-noborder">
+                        <p:outputLabel for="rol-nombre" value="NombreRol"/>
+                        <p:inputText id="rol-nombre"
+                                     value="#{rolBean.rol.nombreRol}"
+                                     style="width: 300px; font-size: 16px;"/>
+                              <p:commandButton value="Crear" action="#{rolBean.create()}" ajax="false"/>
+                    </p:panelGrid>
+                </p:panelGrid>
+            </p:panel>
+        </h:form> 
+    </ui:define>
+</ui:composition>
