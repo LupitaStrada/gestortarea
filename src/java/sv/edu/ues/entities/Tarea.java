@@ -1,6 +1,6 @@
 package sv.edu.ues.entities;
+
 import java.io.Serializable;
-import java.sql.Date;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,6 +11,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.Date;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "Tarea")
@@ -24,11 +27,13 @@ public class Tarea implements Serializable {
     @Column(name = "titulo", length = 255)
     private String titulo;
 
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "fechaAsignacion")
-    private java.sql.Date fechaAsignacion;
+    private Date fechaAsignacion;
 
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "fechaLimite")
-    private java.sql.Date fechaLimite;
+    private Date fechaLimite;
 
     @Column(name = "descripcion", columnDefinition = "TEXT")
     private String descripcion;
@@ -50,7 +55,6 @@ public class Tarea implements Serializable {
     private List<ProgresoTarea> progresoTareas;
 
     // Getters y Setters
-
     public Tarea() {
     }
 
@@ -133,5 +137,5 @@ public class Tarea implements Serializable {
     public void setProgresoTareas(List<ProgresoTarea> progresoTareas) {
         this.progresoTareas = progresoTareas;
     }
-    
+
 }

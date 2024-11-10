@@ -1,5 +1,6 @@
 
 package sv.edu.ues.entities;
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "MiembroEquipo")
-public class MiembroEquipo {
+public class MiembroEquipo implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,7 +28,7 @@ public class MiembroEquipo {
     private Rol rol;
 
     @ManyToOne
-    @JoinColumn(name = "idEquipo", referencedColumnName = "idEquipo")
+    @JoinColumn(name = "idEquipo", referencedColumnName = "Equipo_Id")
     private Equipo equipo;
 
     public int getIdMiembroEquipo() {

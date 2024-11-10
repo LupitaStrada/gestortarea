@@ -1,4 +1,4 @@
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
                  xmlns:h="http://xmlns.jcp.org/jsf/html"
                  xmlns:p="http://primefaces.org/ui"             
                  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
@@ -7,31 +7,46 @@
 
     <!-- Insertar contenido en la sección 'content' de la plantilla -->
     <ui:define name="content">
-        <p:linkButton value="Crear miembroEquipo" href="create.xhtml" />
+        <p:linkButton value="Crear miembro equipo" href="create.xhtml" />
         <br /><br />
         <p:growl id="growl" />
-        
-        <p:dataTable var="miembroEquipos" value="#{miembroEquipoBean.miembrosEquipos}" paginator="true" rows="5">    
+        <p:dataTable var="miembroEquipo" value="#{miembroEquipoBean.miembrosEquipos}" paginator="true" rows="5">    
 
             <p:column>
                 <f:facet name="header">
-                    <h:outputText value="usuarioName" />
+                    <h:outputText value="Usuario" />
                 </f:facet>
-                <h:outputText value="#{miembroEquipo.usuarioName}" />
+                <h:outputText value="#{miembroEquipo.usuario.usuarioName}" />
             </p:column>     
+            
+             <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Rol" />
+                </f:facet>
+                 <h:outputText value="#{miembroEquipo.rol.nombreRol}" />
+            </p:column>  
 
+             <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Equipo" />
+                </f:facet>
+                 <h:outputText value="#{miembroEquipo.equipo.nombreEquipo}" />
+            </p:column>  
+            
             <p:column>
                 <f:facet name="header">
                     <h:outputText value="Acciones" />
                 </f:facet>
                 <p:linkButton value="Editar" outcome="edit">
-                    <f:param name="miembroEquipold" value="#{miembroEquipo.id}"/>
+                    <f:param name="idMiembroEquipo" value="#{miembroEquipo.idMiembroEquipo}"/>
                 </p:linkButton>
                 <p:linkButton value="Eliminar" outcome="delete">
-                    <f:param name="miembroEquipold" value="#{miembroEquipo.id}"/>
+                    <f:param name="idMiembroEquipo" value="#{miembroEquipo.idMiembroEquipo}"/>
                 </p:linkButton>
             </p:column>
         </p:dataTable> 
     </ui:define>
 
 </ui:composition>
+
+

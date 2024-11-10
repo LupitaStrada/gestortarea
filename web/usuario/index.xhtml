@@ -14,28 +14,21 @@
             <p:dataTable var="usuario" value="#{usuarioBean.usuarios}" paginator="true" rows="5">    
                 <p:column>
                     <f:facet name="header">
-                        <h:outputText value="usuarioName" />
+                        <h:outputText value="Nombre de usuario" />
                     </f:facet>
                     <h:outputText value="#{usuario.usuarioName}" />
                 </p:column>     
-
+              
                 <p:column>
                     <f:facet name="header">
-                        <h:outputText value="password" />
-                    </f:facet>
-                    <h:outputText value="#{usuario.password}" />
-                </p:column> 
-
-                <p:column>
-                    <f:facet name="header">
-                        <h:outputText value="fechaNacimiento" />
+                        <h:outputText value="Fecha nacimiento" />
                     </f:facet>
                     <h:outputText value="#{usuario.fechaNacimiento}" />
                 </p:column>  
 
                 <p:column>
                     <f:facet name="header">
-                        <h:outputText value="fechaCreacion" />
+                        <h:outputText value="Edad" />
                     </f:facet>
                     <h:outputText value="#{usuario.edad}" />
                 </p:column> 

@@ -1,33 +1,84 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
-        <h:head>
-            <title>Facelet Title</title>
-        </h:head>
-        <h:body>
-            <p:layout fullPage="true">
-                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
-                    Header
-                </p:layoutUnit>
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+                 xmlns:h="http://xmlns.jcp.org/jsf/html"
+                 xmlns:p="http://primefaces.org/ui"             
+                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                 xmlns:f="http://xmlns.jcp.org/jsf/core"
+                 template="/template.xhtml">
 
-                <p:layoutUnit position="south" size="100"  closable="true" collapsible="true">
-                    footer
-                </p:layoutUnit>
-                <p:layoutUnit position="west" size="175" header="Menu" collapsible="true">
-                    <p:menu>   
-                        <p:submenu label="Tarea">
-                            <p:menuitem value="Listado" outcome="/tarea/index"/>
-                                       
-                        </p:submenu>                              
-                    </p:menu>
+    <!-- Insertar contenido en la sección 'content' de la plantilla -->
+    <ui:define name="content">
+        <p:linkButton value="Crear Tarea" href="create.xhtml" />
+        <br /><br />
+        <p:growl id="growl" />
+        <p:dataTable var="tarea" value="#{tareaBean.tareas}" paginator="true" rows="5">    
 
-                </p:layoutUnit>
-                <p:layoutUnit position="center" size="100" resizable="true" closable="true" collapsible="true">               
-                    Welcome to Tarea
-                </p:layoutUnit>          
-            </p:layout>
-        </h:body>
-</html>
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Titulo" />
+                </f:facet>
+                <h:outputText value="#{tarea.titulo}" />
+            </p:column>     
+            
+              <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Fecha Asignacion" />
+                </f:facet>
+                <h:outputText value="#{tarea.fechaAsignacion}" />
+            </p:column> 
+            
+             <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Fecha Limite" />
+                </f:facet>
+                <h:outputText value="#{tarea.fechaLimite}" />
+            </p:column> 
+            
+             <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Descripcion" />
+                </f:facet>
+                <h:outputText value="#{tarea.descripcion}" />
+            </p:column> 
+            
+             <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Nivel Prioridad" />
+                </f:facet>
+                <h:outputText value="#{tarea.nivelPrioridad}" />
+            </p:column> 
+            
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Estado" />
+                </f:facet>
+                <h:outputText value="#{tarea.estado}" />
+            </p:column> 
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Finalizada" />
+                </f:facet>
+                <h:outputText value="#{tareaBean.tarea.finalizada ? 'Activo' : 'Inactivo'}}" />
+            </p:column> 
+             <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Miembro equipo" />
+                </f:facet>
+                 <h:outputText value="#{tareaBean.tarea.miembroResponsable.usuario.usuarioName} + ' ' + #{tareaBean.tarea.miembroResponsable.rol.nombreRol} + ' '+#{tareaBean.tarea.miembroResponsable.equipo.nombreEquipo} " />
+            </p:column>    
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Acciones" />
+                </f:facet>
+                <p:linkButton value="Editar" outcome="edit">
+                    <f:param name="idTarea" value="#{tarea.idTarea}"/>
+                </p:linkButton>
+                <p:linkButton value="Eliminar" outcome="delete">
+                    <f:param name="idTarea" value="#{tarea.idTarea}"/>
+                </p:linkButton>
+            </p:column>
+        </p:dataTable> 
+    </ui:define>
+
+</ui:composition>
+
 

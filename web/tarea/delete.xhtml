@@ -1,0 +1,44 @@
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+                 xmlns:h="http://xmlns.jcp.org/jsf/html"
+                 xmlns:p="http://primefaces.org/ui"             
+                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                 template="/template.xhtml">
+
+    <!-- Insertar contenido en la sección 'content' de la plantilla -->
+    <ui:define name="content">
+        <h:form>
+            <p:panel header="Eliminar Tareas">
+                <p:panelGrid columns="2" layout="grid">
+                    <p:outputLabel value="Titulo"/>
+                    <h:outputText value="#{tareaBean.tarea.titulo}" />                   
+
+                    <p:outputLabel for="tarea-fechaAsignacion" value="Fecha de asignacion:"/>
+                    <p:calendar id="tarea-fechaAsignacion"
+                                value="#{tareaBean.tarea.fechaAsignacion}" pattern="dd/MM/yyyy"/>
+
+                    <p:outputLabel for="tarea-fechaLimite" value="Fecha de Limite:"/>
+                    <p:calendar id="tarea-fechaLimite"
+                                value="#{tareaBean.tarea.fechaLimite}" pattern="dd/MM/yyyy"/>
+
+                    <p:outputLabel value="Descripcion"/>
+                    <h:outputText value="#{tareaBean.tarea.descripcion}" /> 
+
+                    <p:outputLabel value="Nivel Prioridad"/>
+                    <h:outputText value="#{tareaBean.tarea.nivelPrioridad}" />  
+
+                    <p:outputLabel value="Estado"/>
+                    <h:outputText value="#{tareaBean.tarea.estado}" /> 
+
+                    <p:outputLabel value="Finalizada:" for="finalizada" />
+                    <h:outputText id="estado" value="#{tareaBean.tarea.finalizada ? 'Activo' : 'Inactivo'}" />
+                    
+                    <p:commandButton value="Eliminar" action="#{tareaBean.delete}" ajax="false"/> 
+                    <p:linkButton value="Cancelar" href="index.xhtml" />
+                    <p:inputText type="hidden" value="#{tareaBean.tarea.idTarea}" /> 
+
+                </p:panelGrid>
+            </p:panel>
+        </h:form>
+    </ui:define>
+
+</ui:composition>

@@ -7,22 +7,21 @@
     <!-- Insertar contenido en la sección 'content' de la plantilla -->
     <ui:define name="content">
         <h:form>
-            <p:panel header="Eliminar MiembroEquipo">
+            <p:panel header="Eliminar Miembro Equipo">
                 <p:panelGrid columns="2" layout="grid">
-                    <p:outputLabel value="UserName"/>
-                    <h:outputText value="#{miembroEquipo.equipo.encargado}" />
-                    <p:outputLabel value="nombreEquipo"/>
-                    <h:outputText value="#{equipoBean.equipo.nombreEquipo}"/>
-                    <p:outputLabel value="CantidadMiembros"/> 
-                    <h:outputText value="#{equipoBean.equipo.cantidadMiembros}" />
+                    
+                    <p:outputLabel value="Usuario"/>
+                    <h:outputText value="#{miembroEquipoBean.miembroEquipo.usuario.usuarioName}" />  
+                    
+                     <p:outputLabel value="Rol"/>
+                     <h:outputText value="#{miembroEquipoBean.miembroEquipo.rol.nombreRol}" />
+                    
+                      <p:outputLabel value="Equipo"/>
+                      <h:outputText value="#{miembroEquipoBean.miembroEquipo.equipo.nombreEquipo}" />
 
-                    <p:outputLabel for="equipo-fechaCreacion" value="Fecha de Creación"/>
-                    <p:calendar id="equipo-fechaCreacion"
-                                value="#{equipoBean.equipo.fechaCreacion}" pattern="dd/MM/yyyy"/>
-
-                    <p:commandButton value="Eliminar" action="#{equipoBean.delete}" ajax="false"/> 
+                    <p:commandButton value="Eliminar" action="#{miembroEquipoBean.delete}" ajax="false"/> 
                     <p:linkButton value="Cancelar" href="index.xhtml" />
-                    <p:inputText type="hidden" value="#{equipoBean.equipo.id}" /> 
+                    <p:inputText type="hidden" value="#{miembroEquipoBean.miembroEquipo.idMiembroEquipo}" /> 
 
                 </p:panelGrid>
             </p:panel>
