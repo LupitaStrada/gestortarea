@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 @Entity
@@ -24,6 +26,7 @@ public class ProgresoTarea {
     private float porcentajeAvance;
 
     @Column(name = "fechaActualizacion")
+    @Temporal(TemporalType.TIMESTAMP)
     private Date fechaActualizacion;
 
     @ManyToOne

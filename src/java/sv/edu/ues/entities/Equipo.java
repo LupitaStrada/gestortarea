@@ -13,6 +13,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -46,6 +48,7 @@ public class Equipo implements Serializable {
     @Column(name = "CantidadMiembros")
     private int cantidadMiembros;
 
+    @Temporal(TemporalType.TIMESTAMP)
     @NotNull
     @Column(name = "FechaCreacion")
     private Date fechaCreacion;  //  para manejar fechas

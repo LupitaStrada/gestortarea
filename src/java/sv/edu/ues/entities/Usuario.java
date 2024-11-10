@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 
@@ -20,9 +22,11 @@ public class Usuario implements Serializable {
     @Column(name = "password", length = 255)
     private String password;
 
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "fechaNacimiento")
     private Date fechaNacimiento;
 
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "ultimaConexion")
     private Date ultimaConexion;
 
