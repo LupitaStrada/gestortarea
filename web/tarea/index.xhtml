@@ -57,13 +57,13 @@
                 <f:facet name="header">
                     <h:outputText value="Finalizada" />
                 </f:facet>
-                <h:outputText value="#{tareaBean.tarea.finalizada ? 'Activo' : 'Inactivo'}}" />
+                <h:outputText value="#{tareaBean.tarea.finalizada ? 'Activo' : 'Inactivo'}" />
             </p:column> 
              <p:column>
                 <f:facet name="header">
                     <h:outputText value="Miembro equipo" />
                 </f:facet>
-                 <h:outputText value="#{tareaBean.tarea.miembroResponsable.usuario.usuarioName} + ' ' + #{tareaBean.tarea.miembroResponsable.rol.nombreRol} + ' '+#{tareaBean.tarea.miembroResponsable.equipo.nombreEquipo} " />
+                 <h:outputText value="#{tareaBean.tarea.miembroResponsable.equipo.nombreEquipo} " />
             </p:column>    
             <p:column>
                 <f:facet name="header">

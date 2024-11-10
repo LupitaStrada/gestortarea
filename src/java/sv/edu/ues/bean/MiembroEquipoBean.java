@@ -87,10 +87,7 @@ public class MiembroEquipoBean {
         this.equipos = equipos;
     }
 
-    public void create() throws IOException {
-        //miembroEquipo.setUsuario(usuarioFacadeLocal.find(miembroEquipo.getUsuario().getUsuarioName())) ;
-        // miembroEquipo.setRol(rolFacadeLocal.find(miembroEquipo.getRol().getIdRol())) ;
-      //   miembroEquipo.setEquipo(equipoFacadeLocal.find(miembroEquipo.getEquipo().getId()));
+    public void create() throws IOException {       
         miembroEquipoFacadeLocal.create(miembroEquipo);
         FacesContext.getCurrentInstance().getExternalContext().getFlash().setKeepMessages(true);
         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Registro creado."));

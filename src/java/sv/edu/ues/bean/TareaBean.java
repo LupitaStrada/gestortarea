@@ -19,7 +19,7 @@ import sv.edu.ues.entities.Tarea;
 
 /**
  *
- * @author Mateo
+ * @author guada
  */
 @ManagedBean
 public class TareaBean {

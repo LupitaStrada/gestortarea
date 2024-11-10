@@ -33,8 +33,8 @@ public class Equipo implements Serializable {
     @Column(name = "Equipo_Id")
     private Long id;
 
-    @NotNull
-    @Size(min = 1, max = 50)
+    @NotNull(message = "El encargado es obligatorio.")
+    @Size(min = 5, max = 50,message = "El encargado debe tener entre 1 y 50 caracteres.")
     @Column(name = "Encargado")
     private String encargado;
 

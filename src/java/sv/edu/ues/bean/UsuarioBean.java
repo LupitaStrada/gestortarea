@@ -33,13 +33,10 @@ public class UsuarioBean {
 
     @PostConstruct
     public void init() {
-        System.out.println("UsuarioBean creado.");
-        //inicializamos la eqtiqueta
+        System.out.println("UsuarioBean creado.");       
         usuario = new Usuario();
         String usuarioldParam = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("usuarioName");
         if (usuarioldParam != null) {
-
-            //Long usuariold = Long.parseLong(usuarioldParam);
             usuario = usuarioFacadeLocal.find(usuarioldParam);
         }
         this.usuarios = usuarioFacadeLocal.findAll();

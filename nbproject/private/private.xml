@@ -27,8 +27,24 @@
             <file>file:/C:/Users/guada/OneDrive/Escritorio/proyecto%20Gestor%20de%20tareas%20program%203/GestorTareas/GestorTareas/web/rol/edit.xhtml</file>
         </group>
         <group>
-            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/src/java/sv/edu/ejb/AbstractFacade.java</file>
-            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/src/java/sv/edu/ejb/EquipoFacade.java</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/src/java/sv/edu/ues/bean/LoginBean.java</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/src/java/sv/edu/ues/bean/MiembroEquipoBean.java</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/web/miembroEquipo/delete.xhtml</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/web/tarea/edit.xhtml</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/src/java/sv/edu/ues/entities/MiembroEquipo.java</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/web/equipo/edit.xhtml</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/web/tarea/delete.xhtml</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/web/equipo/index.xhtml</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/web/equipo/delete.xhtml</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/web/tarea/index.xhtml</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/web/miembroEquipo/index.xhtml</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/src/java/sv/edu/ues/entities/Tarea.java</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/src/java/sv/edu/ues/bean/TareaBean.java</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/web/tarea/create.xhtml</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/src/java/sv/edu/ues/entities/Equipo.java</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/web/miembroEquipo/edit.xhtml</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/web/miembroEquipo/create.xhtml</file>
+            <file>file:/C:/Users/Mateo/Documents/Lupita/JavaProyectFinal/gestortarea/src/java/sv/edu/ues/entities/Usuario.java</file>
         </group>
     </open-files>
 </project-private>

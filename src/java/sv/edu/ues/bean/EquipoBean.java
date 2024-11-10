@@ -11,7 +11,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
-import javax.inject.Inject;
+import javax.inject.Inject;;
 import sv.edu.ejb.EquipoFacadeLocal;
 import sv.edu.ues.entities.Equipo;
 
@@ -41,7 +41,8 @@ public class EquipoBean {
         this.equipos = equipoFacadeLocal.findAll();
     }
 
-    public void create() throws IOException {
+    public void create() throws IOException { 
+       
         equipoFacadeLocal.create(equipo);
         FacesContext.getCurrentInstance().getExternalContext().getFlash().setKeepMessages(true);
         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Registro creado."));
