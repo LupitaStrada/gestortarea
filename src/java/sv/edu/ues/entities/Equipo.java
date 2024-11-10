@@ -44,7 +44,7 @@ public class Equipo implements Serializable {
     private String nombreEquipo;
 
     @NotNull
-    @Min(1)  // No se necesita @Size para un número
+    @Min(1)  // No se necesita @Size para un números
     @Column(name = "CantidadMiembros")
     private int cantidadMiembros;
 
