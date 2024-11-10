@@ -32,10 +32,11 @@ public class UsuarioFacade extends AbstractFacade<Usuario> implements UsuarioFac
     @Override
     public Usuario login(Usuario usuario) {
        try {
-            return em.createQuery("SELECT u FROM Usuario u WHERE u.username = :username AND u.password = :password", Usuario.class)
+           // 
+            return em.createQuery("SELECT u FROM Usuario u WHERE u.usuarioName = :username AND u.password = :password", Usuario.class)
                      .setParameter("username", usuario.getUsuarioName())
                     .setParameter("password", usuario.getPassword())
-                     .getSingleResult();
+                     .getSingleResult(); 
         } catch (Exception e) {
             return null; // Manejar excepciones adecuadamente
         }

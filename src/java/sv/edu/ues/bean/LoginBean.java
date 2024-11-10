@@ -57,6 +57,7 @@ public class LoginBean {
             FacesContext.getCurrentInstance().getExternalContext().redirect("welcome.xhtml");
         } else if (auth != null && auth.getUsuarioName().equals(userLogin.getUsuarioName()) && auth.getPassword().equals(userLogin.getPassword())) {
             FacesContext.getCurrentInstance().getExternalContext().redirect("welcome.xhtml");
+            this.user=auth;
         } else {
             message = "Usuario o contraseña incorrectos.";
             FacesContext.getCurrentInstance().getExternalContext().redirect("login.xhtml");

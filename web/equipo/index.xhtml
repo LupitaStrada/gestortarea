@@ -6,52 +6,52 @@
                  template="/template.xhtml">
 
     <!-- Insertar contenido en la sección 'content' de la plantilla -->
-    <ui:define name="content">
-        <p:linkButton value="Crear Equipo" href="create.xhtml" />
-        <br /><br />
-        <p:growl id="growl" />
-        <p:dataTable var="equipo" value="#{equipoBean.equipos}" paginator="true" rows="5">    
+    <ui:define name="content"> 
+            <p:linkButton value="Crear Equipo" href="create.xhtml" />
+            <br /><br />
+            <p:growl id="growl" />
+            <p:dataTable var="equipo" value="#{equipoBean.equipos}" paginator="true" rows="5">    
 
-            <p:column>
-                <f:facet name="header">
-                    <h:outputText value="encargado" />
-                </f:facet>
-                <h:outputText value="#{equipo.encargado}" />
-            </p:column>     
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="encargado" />
+                    </f:facet>
+                    <h:outputText value="#{equipo.encargado}" />
+                </p:column>     
 
-            <p:column>
-                <f:facet name="header">
-                    <h:outputText value="nombreEquipo" />
-                </f:facet>
-                <h:outputText value="#{equipo.nombreEquipo}" />
-            </p:column> 
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="nombreEquipo" />
+                    </f:facet>
+                    <h:outputText value="#{equipo.nombreEquipo}" />
+                </p:column> 
 
-            <p:column>
-                <f:facet name="header">
-                    <h:outputText value="cantidadMiembros" />
-                </f:facet>
-                <h:outputText value="#{equipo.cantidadMiembros}" />
-            </p:column>  
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="cantidadMiembros" />
+                    </f:facet>
+                    <h:outputText value="#{equipo.cantidadMiembros}" />
+                </p:column>  
 
-            <p:column>
-                <f:facet name="header">
-                    <h:outputText value="fechaCreacion" />
-                </f:facet>
-                <h:outputText value="#{equipo.fechaCreacion}" />
-            </p:column> 
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="fechaCreacion" />
+                    </f:facet>
+                    <h:outputText value="#{equipo.fechaCreacion}" />
+                </p:column> 
 
-            <p:column>
-                <f:facet name="header">
-                    <h:outputText value="Acciones" />
-                </f:facet>
-                <p:linkButton value="Editar" outcome="edit">
-                    <f:param name="equipold" value="#{equipo.id}"/>
-                </p:linkButton>
-                <p:linkButton value="Eliminar" outcome="delete">
-                    <f:param name="equipold" value="#{equipo.id}"/>
-                </p:linkButton>
-            </p:column>
-        </p:dataTable> 
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Acciones" />
+                    </f:facet>
+                    <p:linkButton value="Editar" outcome="edit">
+                        <f:param name="equipold" value="#{equipo.id}"/>
+                    </p:linkButton>
+                    <p:linkButton value="Eliminar" outcome="delete">
+                        <f:param name="equipold" value="#{equipo.id}"/>
+                    </p:linkButton>
+                </p:column>
+            </p:dataTable>      
     </ui:define>
 
 </ui:composition>
